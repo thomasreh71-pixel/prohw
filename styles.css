@@ -69,3 +69,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Kompakter Über-uns-Bereich in der Handy-Queransicht */
 @media (orientation:landscape) and (max-width:950px) and (max-height:500px){#ueber-uns{padding-top:18px;padding-bottom:18px}#ueber-uns .split{gap:10px}#ueber-uns .eyebrow{margin-bottom:5px}#ueber-uns h2{margin-bottom:0}#ueber-uns .prose p:first-child{margin-top:0}#ueber-uns .prose p:last-child{margin-bottom:0}}
+
+/* Weniger Leerraum vor Kontakt in der Handy-Queransicht */
+@media (orientation:landscape) and (max-width:950px) and (max-height:500px){#kontakt{padding-top:18px}}
