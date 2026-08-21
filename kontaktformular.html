@@ -14,20 +14,20 @@
 <a class="back-link" href="index.html#kontakt">← Zurück zum Kontakt</a>
 <p class="eyebrow">Kontaktformular</p>
 <h1>Wie können wir Ihnen helfen?</h1>
-<p class="lead">Bitte geben Sie Ihre Kontaktdaten, die genaue Lage und Ihr Anliegen an. Mit * gekennzeichnete Felder sind Pflichtfelder.</p>
+<p class="lead">Bitte geben Sie Ihre Kontaktdaten, die genaue Lage und Ihr Anliegen an.</p>
 <form class="contact-form" id="prohw-contact-form" novalidate>
 <div class="form-grid">
-<label>Name *<input type="text" name="name" autocomplete="family-name" required></label>
-<label>Vorname *<input type="text" name="vorname" autocomplete="given-name" required></label>
-<label>Straße *<input type="text" name="strasse" autocomplete="address-line1" pattern="^[A-Za-zÄÖÜäöüßÀ-ÿ\s.'-]+$" title="Bitte tragen Sie hier nur den Straßennamen ein. Zahlen gehören in das Feld Hausnummer." aria-describedby="strasse-hinweis" required><span class="field-hint" id="strasse-hinweis" role="alert" aria-live="polite"></span></label>
-<label>Hausnummer *<input type="text" name="hausnummer" required></label>
-<label>Postleitzahl *<input type="text" name="postleitzahl" autocomplete="postal-code" inputmode="numeric" pattern="^[0-9]{5}$" maxlength="5" placeholder="z. B. 16767" required></label>
-<label>Ort *<input type="text" name="ort" autocomplete="address-level2" pattern="^[A-Za-zÄÖÜäöüßÀ-ÿ\s.'-]+$" required></label>
-<label>Etage *<input type="text" name="etage" placeholder="z. B. 2. Etage" required></label>
+<label>Vorname<input type="text" name="vorname" autocomplete="given-name" required></label>
+<label>Name<input type="text" name="name" autocomplete="family-name" required></label>
+<label>Telefonnummer<input type="tel" name="telefon" autocomplete="tel" inputmode="numeric" pattern="^[0-9]+$" title="Bitte geben Sie die Telefonnummer ausschließlich mit Zahlen ein." required></label>
+<label>E-Mail-Adresse<input type="email" name="email" autocomplete="email" inputmode="email" pattern="^[^\s@]+@[^\s@\.]+\.[^\s@\.]{2,}$" title="Bitte geben Sie eine vollständige E-Mail-Adresse ein, z. B. name@firma.de." required></label>
+<label>Straße<input type="text" name="strasse" autocomplete="address-line1" pattern="^[A-Za-zÄÖÜäöüßÀ-ÿ\s.'-]+$" title="Bitte tragen Sie hier nur den Straßennamen ein. Zahlen gehören in das Feld Hausnummer." aria-describedby="strasse-hinweis" required><span class="field-hint" id="strasse-hinweis" role="alert" aria-live="polite"></span></label>
+<label>Hausnummer<input type="text" name="hausnummer" required></label>
+<label>Postleitzahl<input type="text" name="postleitzahl" autocomplete="postal-code" inputmode="numeric" pattern="^[0-9]{5}$" maxlength="5" placeholder="z. B. 16767" required></label>
+<label>Ort<input type="text" name="ort" autocomplete="address-level2" pattern="^[A-Za-zÄÖÜäöüßÀ-ÿ\s.'-]+$" list="ort-vorschlaege" placeholder="Wird anhand der Postleitzahl vorgeschlagen" aria-describedby="ort-hinweis" required><datalist id="ort-vorschlaege"></datalist><span class="field-status" id="ort-hinweis" aria-live="polite"></span></label>
+<label>Etage<input type="text" name="etage" placeholder="z. B. 2. Etage" required></label>
 <label>Lage <span class="optional">(optional)</span><input type="text" name="lage" placeholder="z. B. rechts, Mitte oder links"></label>
-<label>Telefonnummer *<input type="tel" name="telefon" autocomplete="tel" inputmode="numeric" pattern="^[0-9]+$" title="Bitte geben Sie die Telefonnummer ausschließlich mit Zahlen ein." required></label>
-<label>E-Mail-Adresse *<input type="email" name="email" autocomplete="email" inputmode="email" pattern="^[^\s@]+@[^\s@\.]+\.[^\s@\.]{2,}$" title="Bitte geben Sie eine vollständige E-Mail-Adresse ein, z. B. name@firma.de." required></label>
-<label class="form-full">Ihr Anliegen *<textarea name="anliegen" rows="7" required></textarea></label>
+<label class="form-full">Ihr Anliegen<textarea name="anliegen" rows="7" required></textarea></label>
 </div>
 <label class="privacy-check"><input type="checkbox" name="datenschutz" required><span>Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. Hinweise finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span></label>
 <button class="btn btn-primary" type="submit">Anfrage abschicken</button>
