@@ -30,3 +30,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 /* Vollständig anklickbare Leistungskacheln mit HMZ-ähnlicher Aktivierung */
 .service-card{text-decoration:none;color:inherit;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}.service-card:hover,.service-card:focus-visible{transform:translateY(-4px);box-shadow:0 18px 44px rgba(0,64,128,.2);border-color:var(--accent);outline:none}.service-card:focus-visible{box-shadow:0 0 0 4px rgba(230,144,16,.32),0 18px 44px rgba(0,64,128,.2)}.service-card .card-image{transition:transform .25s ease}.service-card:hover .card-image,.service-card:focus-visible .card-image{transform:scale(1.025)}.card-more{display:block;margin-top:auto;padding-top:14px;font-weight:850;color:var(--navy2);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}.service-card:hover .card-more,.service-card:focus-visible .card-more{color:var(--accent-dark)}
 @media(prefers-reduced-motion:reduce){.service-card,.service-card .card-image{transition:none}.service-card:hover,.service-card:focus-visible{transform:none}.service-card:hover .card-image,.service-card:focus-visible .card-image{transform:none}}
+
+/* Optionale Felder werden wie bei HMZ ohne sichtbaren Zusatz gekennzeichnet. */
+.optional{display:none!important}
