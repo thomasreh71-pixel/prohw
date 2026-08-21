@@ -85,3 +85,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Weniger Außenabstand am Projekt-&-Handwerk-Block im Handy-Hochformat */
 @media (max-width:650px) and (orientation:portrait){.intro{padding-top:14px;padding-bottom:14px}}
+
+/* Etwas kleinere Leistungsüberschrift im Handy-Hochformat */
+@media (max-width:650px) and (orientation:portrait){#leistungen h2{font-size:1.5rem}}
