@@ -5,7 +5,12 @@ if(kontaktFormular){
   const pflichtFelder=[...kontaktFormular.querySelectorAll('[required]')];
   const strassenFeld=kontaktFormular.elements.strasse;
   const strassenHinweis=document.getElementById('strasse-hinweis');
+  const plzFeld=kontaktFormular.elements.postleitzahl;
+  const ortFeld=kontaktFormular.elements.ort;
+  const ortListe=document.getElementById('ort-vorschlaege');
+  const ortHinweis=document.getElementById('ort-hinweis');
   let hinweisTimer;
+  let plzAnfrage;
 
   function meldungFuer(feld){
     if(feld.validity.valueMissing)return 'Pflichtangabe: Bitte füllen Sie dieses Feld aus.';
@@ -86,6 +91,42 @@ if(kontaktFormular){
 
   strassenFeld.addEventListener('input',ziffernAusStrasseEntfernen);
   strassenFeld.addEventListener('paste',()=>setTimeout(ziffernAusStrasseEntfernen,0));
+
+  async function passendeOrteLaden(){
+    const plz=plzFeld.value.replace(/\D/g,'').slice(0,5);
+    plzFeld.value=plz;
+    ortListe.replaceChildren();
+    ortHinweis.classList.remove('error');
+    if(plz.length<5){
+      ortHinweis.textContent='';
+      return;
+    }
+    ortHinweis.textContent='Passenden Ort suchen …';
+    try{
+      const antwort=await fetch('https://api.zippopotam.us/DE/'+plz);
+      if(!antwort.ok)throw new Error('Kein Ort gefunden');
+      const daten=await antwort.json();
+      const orte=[...new Set((daten.places||[]).map(ort=>ort['place name']).filter(Boolean))];
+      orte.forEach(ort=>{
+        const option=document.createElement('option');
+        option.value=ort;
+        ortListe.append(option);
+      });
+      if(orte.length===1)ortFeld.value=orte[0];
+      ortHinweis.textContent=orte.length===1?'Ort wurde anhand der Postleitzahl ergänzt.':orte.length+' passende Orte stehen zur Auswahl.';
+      if(ortFeld.classList.contains('invalid'))feldPruefen(ortFeld);
+    }catch(error){
+      ortHinweis.textContent='Für diese Postleitzahl wurde kein Ort gefunden. Bitte tragen Sie den Ort selbst ein.';
+      ortHinweis.classList.add('error');
+    }
+  }
+
+  plzFeld.addEventListener('input',()=>{
+    ortFeld.value='';
+    clearTimeout(plzAnfrage);
+    plzAnfrage=setTimeout(passendeOrteLaden,350);
+  });
+  plzFeld.addEventListener('blur',passendeOrteLaden);
 
   kontaktFormular.addEventListener('submit',event=>{
     event.preventDefault();
