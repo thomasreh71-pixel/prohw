@@ -33,3 +33,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Optionale Felder werden wie bei HMZ ohne sichtbaren Zusatz gekennzeichnet. */
 .optional{display:none!important}
+
+/* Kompakte Rechtsseiten-Typografie entsprechend der HMZ-Vorlage */
+.legal{padding:58px 0 72px;font-size:1rem}.legal-content{max-width:900px}.legal h1{font-size:clamp(1.75rem,3vw,2.6rem);letter-spacing:-.035em}.legal h2{font-size:clamp(1.45rem,2vw,2rem);margin-top:32px}.legal p,.legal li{color:var(--muted)}.legal a{color:var(--navy2);font-weight:700}
