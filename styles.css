@@ -77,6 +77,5 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 .hero-copy h1{font-size:clamp(2rem,3.6vw,3.25rem)}.hero-copy h1 span{color:#f39200}
 @media(max-width:650px){.hero-copy h1{font-size:2rem}}
 
-/* Korrekte Sprungpositionen unterhalb der feststehenden Navigation */
-html{scroll-padding-top:100px}#leistungen,#ueber-uns,#ablauf,#kontakt{scroll-margin-top:100px}
-@media(max-width:650px){html{scroll-padding-top:175px}#leistungen,#ueber-uns,#ablauf,#kontakt{scroll-margin-top:175px}}
+/* Sprungpositionen wie bei HMZ: Überschrift direkt unter dem oberen Banner */
+:root{--header-height:88px}html{scroll-padding-top:var(--header-height)}
