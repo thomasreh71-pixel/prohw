@@ -88,3 +88,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Einheitlich kleinere Abschnittsüberschriften im Handy-Hochformat */
 @media (max-width:650px) and (orientation:portrait){.intro h2,#leistungen h2,#ueber-uns h2,#ablauf h2,#kontakt h2{font-size:1.5rem}}
+
+/* Weniger Leerraum nach dem Über-uns-Text im Handy-Hochformat */
+@media (max-width:650px) and (orientation:portrait){#ueber-uns{padding-bottom:14px}#ueber-uns .prose p:last-child{margin-bottom:0}}
