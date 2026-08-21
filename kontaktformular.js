@@ -70,10 +70,10 @@ if(kontaktFormular){
       }
     });
     feld.addEventListener('input',()=>{
-      if(feld.classList.contains('invalid'))feldPruefen(feld);
+      if(feld.type==='checkbox'||feld.classList.contains('invalid'))feldPruefen(feld);
     });
     feld.addEventListener('change',()=>{
-      if(feld.classList.contains('invalid'))feldPruefen(feld);
+      if(feld.type==='checkbox'||feld.classList.contains('invalid'))feldPruefen(feld);
     });
   }
 
