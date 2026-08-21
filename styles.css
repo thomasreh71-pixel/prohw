@@ -56,3 +56,7 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Niedrigere Felder Planen, Montieren und Koordinieren auf dem Handy */
 @media(max-width:650px){.hero-visual{padding:12px}.visual-grid{gap:7px}.visual-card,.visual-card.wide{min-height:0;padding:11px 13px}.visual-card b{font-size:1rem;line-height:1.2}.visual-card small{font-size:.78rem;line-height:1.3}}
+
+/* Etwas kleinere Hauptüberschrift auf dem Desktop */
+.hero-copy h1{font-size:clamp(2.25rem,4.2vw,3.7rem)}
+@media(max-width:650px){.hero-copy h1{font-size:2.3rem}}
