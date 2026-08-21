@@ -79,3 +79,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Sprungpositionen wie bei HMZ: Überschrift direkt unter dem oberen Banner */
 :root{--header-height:88px}html{scroll-padding-top:var(--header-height)}
+
+/* Platzsparender oberer Banner wie bei HMZ in der Handy-Hochkantansicht */
+@media (max-width:650px) and (orientation:portrait){html{scroll-padding-top:76px}.nav-wrap{min-height:76px;padding:6px 0;display:flex;flex-direction:row;align-items:center;gap:8px}.brand{flex:0 0 124px;gap:6px;min-width:0}.brand-logo{width:50px;height:35px}.brand-text{min-width:0;line-height:1.08}.brand-text strong{font-size:.72rem}.brand-text small{font-size:.56rem;margin-top:2px}.mainnav{flex:1;width:auto;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 8px}.mainnav a{font-size:.74rem;line-height:1.2}}
