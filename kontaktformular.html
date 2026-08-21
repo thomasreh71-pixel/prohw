@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Kontaktformular der ProHW GmbH Projekt Handwerk und Ausführungen.">
+<title>Kontaktformular | ProHW GmbH</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="canonical" href="https://www.prohw.de/kontaktformular.html">
+</head>
+<body>
+<header class="site-header"><div class="wrap nav-wrap"><a class="brand" href="index.html"><img class="brand-logo" src="assets/images/prohw-logo.webp" width="210" height="146" alt="ProHW – Ihr Projekt-Handwerker"><span class="brand-text"><strong>ProHW GmbH</strong><small>Projekt · Handwerk · Ausführungen</small></span></a><nav class="mainnav"><a href="index.html#leistungen">Leistungen</a><a href="index.html#ueber-uns">Über uns</a><a href="index.html#ablauf">Ablauf</a><a href="kontaktformular.html" aria-current="page">Kontakt</a></nav></div></header>
+<main class="section form-page"><div class="wrap form-content">
+<a class="back-link" href="index.html#kontakt">← Zurück zum Kontakt</a>
+<p class="eyebrow">Kontaktformular</p>
+<h1>Wie können wir Ihnen helfen?</h1>
+<p class="lead">Bitte geben Sie Ihre Kontaktdaten, die genaue Lage und Ihr Anliegen an. Mit * gekennzeichnete Felder sind Pflichtfelder.</p>
+<form class="contact-form" id="prohw-contact-form" novalidate>
+<div class="form-grid">
+<label>Name *<input type="text" name="name" autocomplete="family-name" required></label>
+<label>Vorname *<input type="text" name="vorname" autocomplete="given-name" required></label>
+<label>Straße *<input type="text" name="strasse" autocomplete="address-line1" pattern="^[A-Za-zÄÖÜäöüßÀ-ÿ\s.'-]+$" title="Bitte tragen Sie hier nur den Straßennamen ein. Zahlen gehören in das Feld Hausnummer." aria-describedby="strasse-hinweis" required><span class="field-hint" id="strasse-hinweis" role="alert" aria-live="polite"></span></label>
+<label>Hausnummer *<input type="text" name="hausnummer" required></label>
+<label>Postleitzahl *<input type="text" name="postleitzahl" autocomplete="postal-code" inputmode="numeric" pattern="^[0-9]{5}$" maxlength="5" placeholder="z. B. 16767" required></label>
+<label>Ort *<input type="text" name="ort" autocomplete="address-level2" pattern="^[A-Za-zÄÖÜäöüßÀ-ÿ\s.'-]+$" required></label>
+<label>Etage *<input type="text" name="etage" placeholder="z. B. 2. Etage" required></label>
+<label>Lage <span class="optional">(optional)</span><input type="text" name="lage" placeholder="z. B. rechts, Mitte oder links"></label>
+<label>Telefonnummer *<input type="tel" name="telefon" autocomplete="tel" inputmode="numeric" pattern="^[0-9]+$" title="Bitte geben Sie die Telefonnummer ausschließlich mit Zahlen ein." required></label>
+<label>E-Mail-Adresse *<input type="email" name="email" autocomplete="email" inputmode="email" pattern="^[^\s@]+@[^\s@\.]+\.[^\s@\.]{2,}$" title="Bitte geben Sie eine vollständige E-Mail-Adresse ein, z. B. name@firma.de." required></label>
+<label class="form-full">Ihr Anliegen *<textarea name="anliegen" rows="7" required></textarea></label>
+</div>
+<label class="privacy-check"><input type="checkbox" name="datenschutz" required><span>Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden. Hinweise finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span></label>
+<button class="btn btn-primary" type="submit">Anfrage abschicken</button>
+</form>
+</div></main>
+<footer class="site-footer"><div class="wrap footer-grid"><p>© ProHW GmbH</p><div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kontaktformular.html">Kontakt</a></div></div></footer>
+<script src="kontaktformular.js"></script>
+</body>
+</html>
