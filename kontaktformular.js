@@ -47,12 +47,23 @@ if(kontaktFormular){
     return false;
   }
 
+  let fokusRueckkehr=false;
+
   pruefFelder.forEach(feld=>{
     fieldEvents(feld);
   });
 
   function fieldEvents(feld){
-    feld.addEventListener('blur',()=>feldPruefen(feld));
+    feld.addEventListener('blur',()=>{
+      if(!feldPruefen(feld)&&feld.type!=='checkbox'&&!fokusRueckkehr){
+        fokusRueckkehr=true;
+        setTimeout(()=>{
+          feld.focus();
+          if(typeof feld.select==='function')feld.select();
+          fokusRueckkehr=false;
+        },0);
+      }
+    });
     feld.addEventListener('input',()=>{
       if(feld.classList.contains('invalid'))feldPruefen(feld);
     });
