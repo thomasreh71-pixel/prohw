@@ -22,3 +22,7 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 /* Hauptmotiv im ruhigen HMZ-Stil, eigenständig für ProHW */
 .hero{padding:58px 0;background:linear-gradient(90deg,rgba(234,243,251,.98) 0%,rgba(255,255,255,.94) 38%,rgba(255,255,255,.32) 65%,rgba(255,255,255,.06) 100%),url("assets/images/prohw-hero-background.webp") center center/cover no-repeat}.hero-grid{min-height:540px}.hero-copy{align-self:center;background:rgba(255,255,255,.9);border:1px solid rgba(203,220,235,.92);border-radius:22px;padding:30px;box-shadow:var(--shadow);backdrop-filter:blur(3px)}.hero-visual{background:rgba(0,64,128,.93);backdrop-filter:blur(3px)}
 @media(max-width:650px){.hero{background-position:62% center;padding:36px 0}.hero-grid{min-height:520px;align-items:end}.hero-copy{padding:22px 18px;background:rgba(255,255,255,.94)}.hero-visual{background:rgba(0,64,128,.95)}}
+
+/* Bildhöhe der Leistungs-Unterseiten entsprechend der HMZ-Vorlage */
+.detail-visual img,.detail-inline-visual img{max-height:360px}
+@media(max-width:620px){.detail-visual img,.detail-inline-visual img{max-height:260px}}
