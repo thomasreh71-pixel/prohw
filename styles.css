@@ -39,3 +39,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Kompakter Abstand zwischen Überschrift und Text im mobilen Über-uns-Bereich */
 @media(max-width:650px){#ueber-uns .split{gap:10px}#ueber-uns h2{margin-bottom:0}}
+
+/* Kompaktere Abstände zwischen Einleitung und Leistungen auf dem Handy */
+@media(max-width:650px){.intro{padding-bottom:28px}.intro .eyebrow,#leistungen .eyebrow{margin-bottom:6px}.intro h2,#leistungen h2{margin-bottom:8px}.intro p{margin:0}#leistungen{padding-top:28px}#leistungen .section-head{gap:8px;margin-bottom:24px}#leistungen .section-head>p{margin:0}}
