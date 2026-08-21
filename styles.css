@@ -52,3 +52,6 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 
 /* Weniger Leerraum oberhalb der Abschnittsüberschriften auf dem Handy */
 @media(max-width:650px){.intro,#leistungen,#ueber-uns,#ablauf{padding-top:28px}}
+
+/* Niedrigere Felder Planen, Montieren und Koordinieren auf dem Handy */
+@media(max-width:650px){.hero-visual{padding:12px}.visual-grid{gap:7px}.visual-card,.visual-card.wide{min-height:0;padding:11px 13px}.visual-card b{font-size:1rem;line-height:1.2}.visual-card small{font-size:.78rem;line-height:1.3}}
