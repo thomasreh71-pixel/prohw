@@ -50,7 +50,8 @@ body{color:var(--ink);background:var(--white)}.site-header{background:rgba(255,2
 .contact-company{display:flex;flex-direction:column;align-items:flex-start;gap:8px;color:var(--navy);line-height:1.3}.contact-company img{display:block;width:100px;height:auto;object-fit:contain}.contact-company strong{display:block}
 @media(max-width:650px){.contact-company{gap:7px}.contact-company img{width:80px}.contact-company strong{font-size:.92rem}}
 
-/* Weniger Leerraum oberhalb der Abschnittsüberschriften auf dem Handy */
+/* Weniger Leerraum oberhalb der Abschnittsüberschriften */
+.intro,#leistungen,#ueber-uns,#ablauf{padding-top:46px}
 @media(max-width:650px){.intro,#leistungen,#ueber-uns,#ablauf{padding-top:28px}}
 
 /* Niedrigere Felder Planen, Montieren und Koordinieren auf dem Handy */
