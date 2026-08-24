@@ -13,7 +13,7 @@
 .privacy-check,.privacy-check a{color:#e53b35!important}.privacy-check input:checked+span,.privacy-check input:checked+span a{color:var(--navy)!important}.inline-error,.field-hint,.field-status.error{color:#e53b35}.contact-form input.invalid,.contact-form textarea.invalid{border-color:#e53b35;background:#fff8f8}.field-status{display:block;min-height:1.15em;color:var(--navy2);font-size:.82rem;font-weight:700;line-height:1.35}
 .privacy-check:has(>input:checked){color:var(--navy)!important}.privacy-check:has(>input:checked) a{color:var(--navy)!important}.privacy-check:has(>input:not(:checked)){color:#e53b35!important}.privacy-check:has(>input:not(:checked)) a{color:#e53b35!important}.privacy-check>.inline-error{display:block;margin:0;color:#e53b35!important;font-size:.82rem;font-weight:800;line-height:1.35}.privacy-check:has(>input:checked)>.inline-error:empty{display:none}
 .hero-logo-wrap{display:flex;justify-content:center;align-items:center;margin:0 0 12px;padding:16px;background:#fff;border-radius:15px}.prohw-logo-hero{display:block;width:min(250px,72vw);height:auto;object-fit:contain}
-@media(max-width:650px){.hero-logo-wrap{padding:12px}.prohw-logo-hero{width:min(220px,70vw)}}
+@media(max-width:650px){.hero-logo-wrap{padding:10px}.prohw-logo-hero{width:min(170px,52vw)}}
 
 /* Einheitliche, direkt aus dem bestätigten ProHW-Logo abgeleitete Farbwelt */
 :root{--ink:#06376f;--muted:#3f6488;--paper:#f2f7fc;--white:#fff;--navy:#004080;--navy2:#075a9f;--accent:#e69010;--accent2:#f5b64f;--accent-dark:#a95d00;--blue-soft:#eaf3fb;--orange-soft:#fff4e3;--line:#cbdceb;--shadow:0 18px 50px rgba(0,64,128,.14)}
