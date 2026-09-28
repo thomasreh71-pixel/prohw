@@ -155,6 +155,7 @@ if(kontaktFormular){
       'Anliegen:',
       daten.get('anliegen')
     ].join('\n');
-    window.location.href='mailto:info@prohw.de?subject='+encodeURIComponent('Kontaktanfrage über die ProHW-Webseite')+'&body='+encodeURIComponent(inhalt);
+    const empfaenger=['info','prohw.de'].join('@');
+    window.location.href='mailto:'+empfaenger+'?subject='+encodeURIComponent('Kontaktanfrage über die ProHW-Webseite')+'&body='+encodeURIComponent(inhalt);
   });
 }
